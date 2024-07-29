@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+:root {
+   font-size: 65.2%;
+  --brand-color: #f1a5b1;
+
+  --dark: #0b0a0a;
+
+  --white: #ffffff;
+}
+
+body {
+   color: var(--white);
+   
+   font-size: 1.6rem; 
+   font-family: "Archivo", sans-serif;
+   background-image: url("./wallpaper.png");
+   background-repeat: no-repeat; 
+   background-size: cover;
+   height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Andada Pro", serif;
+}
+a{
+   text-decoration: none;
+}
+.container{
+   max-width: 100rem;
+   margin: 0 auto;
+   padding: 3rem 1rem;
+}
+/*----------header----------*/
+header nav{
+   display: flex; 
+   justify-content: space-between;
+   align-items: center;
+}
+header nav ul{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   margin-top: 1rem;
+}
+header nav ul a img{
+   width: 3rem;
+}
+
+/*----------section----------*/
+main section{
+   margin-top: 7rem;
+   display: flex;
+   align-items: center;
+}
+.section__texto{
+   flex-basis:50rem;
+}
+.section__texto .section__nome{
+   padding-bottom: .5rem;
+}
+.section__texto .section__titulo{
+   font-size: 5rem;
+}
+.section__texto .section__paragrafo{
+   margin-top: 2.5rem;
+}
+.section__texto .section__botao button {
+   display: inline-block;
+   margin-top: 3rem;
+   font-size: 1.3rem;
+   text-align: center;
+   font-weight: bold;
+   width: 16rem;
+   height: 4rem;
+}
+.section__botao .botao__imagem {
+   background-image: url("./Play.svg");
+   background-size: 1.5rem;
+   background-repeat: no-repeat;
+   background-position: 1rem;
+   background-color: var(--brand-color);
+   border: 2px solid var(--brand-color);
+}
+.botao__trailer {
+   background: transparent;  
+   border: 2px solid var(--brand-color);
+   color: var(--white);
+}
+.section__imagem img{
+   max-width: 100%;
+}
+
+
+@media (max-width: 768px){
+   
+   /*----------+main---------*/
+   main section{
+      
+      flex-direction: column-reverse;
+   }
+   .section__texto{
+      flex-basis:1;
+   }
+   .section__imagem{
+      width: 30.7rem;
+   }
+
+}
+@media (max-width: 580px){
+   /*----------header---------*/
+   header nav{
+      justify-content: center;
+   }
+   header nav ul{
+      display: none;
+   }
+}
